@@ -29,6 +29,7 @@
     export let filterText = '';
     export let placeholder = 'Please select';
     export let placeholderAlwaysShow = false;
+    export let placeholderNoOptions = 'No options';
     export let items = null;
     export let label = 'label';
     export let itemFilter = (label, filterText) => `${label}`.toLowerCase().includes(filterText.toLowerCase());
@@ -708,7 +709,7 @@
                 {/each}
             {:else if !hideEmptyState}
                 <slot name="empty">
-                    <div class="empty">No options</div>
+                    <div class="empty">{placeholderNoOptions}</div>
                 </slot>
             {/if}
         </div>
